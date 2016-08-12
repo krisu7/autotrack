@@ -1,27 +1,27 @@
 # Autotrack [![Build Status](https://travis-ci.org/googleanalytics/autotrack.svg?branch=master)](https://travis-ci.org/googleanalytics/autotrack)
 
-- [Overview](#overview)
-- [Plugins](#plugins)
-- [Installation and usage](#installation-and-usage)
-  - [Loading autotrack via npm](#loading-autotrack-via-npm)
-  - [Passing configuration options](#passing-configuration-options)
-- [Advanced configuration](#advanced-configuration)
-  - [Custom builds](#custom-builds)
-  - [Using autotrack with multiple trackers](#using-autotrack-with-multiple-trackers)
-- [Browser Support](#browser-support)
-- [Translations](#translations)
+- [Przegląd](#przegląd)
+- [Pluginy](#pluginy)
+- [Instalacja i używanie](#instalacja-i-używanie)
+  - [Ładowanie autotracka za pomocą npm](#ładowanie-autotracka-za-pomocą-npm)
+  - [Przekazywanie opcji konfiguracji](#przekazywanie-opcji-konfiguracji)
+- [Zaawansowana konfiguracja](#zaawansowana-konfiguracja)
+  - [Własna konfiguracja](#własna-konfiguracja)
+  - [Używanie autotracka z wieloma trackerami](#używanie-autotracka-z-wieloma-trackerami)
+- [Wsparcie przeglądarek](#wsparcie-przeglądarek)
+- [Tłumaczenia](#tłumaczenia)
 
-## Overview
+## Przegląd
 
-The default [JavaScript tracking snippet](https://developers.google.com/analytics/devguides/collection/analyticsjs/) for Google Analytics runs when a web page is first loaded and sends a pageview hit to Google Analytics. If you want to know about more than just pageviews (e.g. events, social interactions), you have to write code to capture that information yourself.
+Domyślny [kod śledzący JavaScript](https://developers.google.com/analytics/devguides/collection/analyticsjs/) Google Analytics działa gdy strona jest po raz pierwszy ładowana i wysyła odsłonę do Google Analytics. Jeśli chcesz wiedzieć więcej niż tylko o odsłonach strony (np. zdarzenia, interakcje socjalne), musisz napisać kod przechwytujący te informacje samodzielnie.
 
-Since most website owners care about a lot of the same types of user interactions, web developers end up writing the same code over and over again for every new site they build.
+Skoro większość właścicieli stron troszczy się o wiele podobnych typów interakcji użytkownika, web developerzy piszą w kółko ten sam kod dla każdej strony którą tworzą.
 
-Autotrack was created to solve this problem. It provides default tracking for the interactions most people care about, and it provides several convenience features (e.g. declarative event tracking) to make it easier than ever to understand how people are using your site.
+Autotrack został stworzony by rozwiązać ten problem. Dostarcza domyślne śledzenie interakcji o które troszczy się większość osób, oraz kilka wygodnych funkcjonalności (np. śledzenie zadelarowanych zdarzeń) by jeszcze bardziej uprościć zrozumienie tego, jak ludzie korzystają z twojej witryny.
 
-## Plugins
+## Pluginy
 
-The `autotrack.js` library is small (6K gzipped), and includes the following plugins. By default all plugins are bundled together, but they can be included and configured separately as well. This table includes a brief description of each plugin; you can click on the plugin name to see the full documentation and usage instructions:
+Biblioteka `autotrack.js` jest mała (6K gzip), oraz zawiera wymienione pluginy. Domyślnie wszystkie pluginy są dostarczane razem, ale mogą być również dołączane i konfigurowane niezależnie. Niniejsza tabela zawiera krótki opis każdego pluginu; możesz kliknąć na nazwę pluginu by zobaczyć jego pełną dokumentację oraz instrukcję użycia.
 
 <table>
   <tr>
@@ -68,7 +68,7 @@ The `autotrack.js` library is small (6K gzipped), and includes the following plu
 
 **Disclaimer:** autotrack is maintained by members of the Google Analytics developer platform team and is primarily intended for a developer audience. It is not an official Google Analytics product and does not qualify for Google Analytics 360 support. Developers who choose to use this library are responsible for ensuring that their implementation meets the requirements of the [Google Analytics Terms of Service](https://www.google.com/analytics/terms/us.html) and the legal obligations of their respective country.
 
-## Installation and usage
+## Instalacja i używanie
 
 To add autotrack to your site, you have to do two things:
 
@@ -102,7 +102,7 @@ Of course, you'll have to make the following modifications to customize autotrac
 
 **Note:** the [analytics.js plugin system](https://developers.google.com/analytics/devguides/collection/analyticsjs/using-plugins) is designed to support asynchronously loaded scripts, so it doesn't matter if `autotrack.js` is loaded before or after `analytics.js`. It also doesn't matter if the `autotrack.js` library is loaded individually or bundled with the rest of your JavaScript code.
 
-### Loading autotrack via npm
+### Ładowanie autotracka za pomocą npm
 
 If you use npm and a module loader like [Browserify](http://browserify.org/), [Webpack](https://webpack.github.io/), or [SystemJS](https://github.com/systemjs/systemjs), you can include autotrack in your build by requiring it as you would any other npm module:
 
@@ -145,7 +145,7 @@ ga('send', 'pageview');
 
 **Note:** be careful not to confuse the node module [`require`](https://nodejs.org/api/modules.html) statement with the `analytics.js` [`require`](https://developers.google.com/analytics/devguides/collection/analyticsjs/command-queue-reference#require) command. When loading autotrack with an npm module loader, both requires must be used.
 
-### Passing configuration options
+### Przekazywanie opcji konfiguracji
 
 All autotrack plugins accept a configuration object as the third parameter to the `require` command.
 
@@ -153,9 +153,9 @@ Some of the plugins (e.g. `outboundLinkTracker`, `socialWidgetTracker`, `urlChan
 
 See the individual plugin documentation to reference what options each plugin accepts (and what the default value is, if any).
 
-## Advanced configuration
+## Zaawansowana konfiguracja
 
-### Custom builds
+### Własna konfiguracja
 
 The autotrack library is built modularly and each plugin includes its own dependencies, so you can create a custom build of the library using a script bundler such as [Browserify](http://browserify.org/).
 
@@ -169,7 +169,7 @@ When making a custom build, be sure to update the tracking snippet to only requi
 
 If you're already using a module loader like [Browserify](http://browserify.org/), [Webpack](https://webpack.github.io/), or [SystemJS](https://github.com/systemjs/systemjs) to build your JavaScript, you can skip the above step and just require the plugins as described in the [loading autotrack via npm](#loading-autotrack-via-npm) section.
 
-### Using autotrack with multiple trackers
+### Używanie autotracka z wieloma trackerami
 
 All autotrack plugins support multiple trackers and work by specifying the tracker name in the `require` command. The following example creates two trackers and requires various autotrack plugins on each.
 
@@ -192,7 +192,7 @@ ga('tracker1.send', 'pageview');
 ga('tracker2.send', 'pageview');
 ```
 
-## Browser Support
+## Wsparcie przeglądarek
 
 Autotrack will safely run in any browser without errors, as feature detection is always used with any potentially unsupported code. However, autotrack will only track features supported in the browser running it. For example, a user running Internet Explorer 8 will not be able to track media query usage, as media queries themselves aren't supported in Internet Explorer 8.
 
@@ -227,7 +227,7 @@ All autotrack plugins are [tested via Sauce Labs](https://saucelabs.com/u/autotr
   </tr>
 </table>
 
-## Translations
+## Tłumaczenia
 
 The following translations have been graciously provided by the community. Please note that these translations are unofficial and may be inaccurate or out of date:
 
