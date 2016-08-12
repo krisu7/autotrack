@@ -26,56 +26,56 @@ Biblioteka `autotrack.js` jest mała (6K gzip), oraz zawiera wymienione pluginy.
 <table>
   <tr>
     <th align="left">Plugin</th>
-    <th align="left">Description</th>
+    <th align="left">Opis</th>
   </tr>
   <tr>
     <td><a href="/docs/plugins/clean-url-tracker.md"><code>cleanUrlTracker</code></a></td>
-    <td>Ensures consistency in the URL paths that get reported to Google Analytics; avoiding the problem where separate rows in your pages reports actually point to the same page.</td>
+    <td>Zapewnia spójność w ścieżkach URL raportowanych do Google Analytics; omija problem gdzie osobne wiersze w raportach twoich stron wskazują tą samą stronę.</td>
   </tr>
   <tr>
     <td><a href="/docs/plugins/event-tracker.md"><code>eventTracker</code></a></td>
-    <td>Enables declarative event tracking, via HTML attributes in the markup.</td>
+    <td>Umożliwia śledzenie zadeklarowanych zdarzeń, za pomocą atrybutów HTML.</td>
   </tr>
   <tr>
     <td><a href="/docs/plugins/impression-tracker.md"><code>impressionTracker</code></a></td>
-    <td>Allows you to track when elements are visible within the viewport.</td>
+    <td>Pozwala Tobie na śledzenie kiedy elementy są widoczne w oknie przeglądarki (viewport).</td>
   </tr>
   <tr>
     <td><a href="/docs/plugins/media-query-tracker.md"><code>mediaQueryTracker</code></a></td>
-    <td>Enables tracking media query matching and media query changes.</td>
+    <td>Umożliwia śledzenie pasujących media query oraz zmian media query.</td>
   </tr>
   <tr>
     <td><a href="/docs/plugins/outbound-form-tracker.md"><code>outboundFormTracker</code></a></td>
-    <td>Automatically tracks form submits to external domains.</td>
+    <td>Automatycznie śledzi wysyłanie formularzy do zewnętrznych domen.</td>
   </tr>
   <tr>
     <td><a href="/docs/plugins/outbound-link-tracker.md"><code>outboundLinkTracker</code></a></td>
-    <td>Automatically tracks link clicks to external domains.</td>
+    <td>Automatycznie śledzi kliknięcia linków do zewnętrznych domen.</td>
   </tr>
   <tr>
     <td><a href="/docs/plugins/page-visibility-tracker.md"><code>pageVisibilityTracker</code></a></td>
-    <td>Tracks page visibility state changes, which enables much more accurate session, session duration, and pageview metrics.</td>
+    <td>Śledzi zmiany wyświetlania strony, co daje dużo bardziej dokładne informacje o sesji, czasie trwania sesji oraz dokładniejsze pomiary odsłon.</td>
   </tr>
   <tr>
     <td><a href="/docs/plugins/social-widget-tracker.md"><code>socialWidgetTracker</code></a></td>
-    <td>Automatically tracks user interactions with the official Facebook and Twitter widgets.</td>
+    <td>Automatycznie śledzi interakcję użytkownika z oficjalnymi widgetami Facebooka i Twittera.</td>
   </tr>
   <tr>
     <td><a href="/docs/plugins/url-change-tracker.md"><code>urlChangeTracker</code></a></td>
-    <td>Automatically tracks URL changes for single page applications.</td>
+    <td>Automatycznie śledzi zmiany URL dla aplikacji składających się z jednej strony (SPA).</td>
   </tr>
 </table>
 
-**Disclaimer:** autotrack is maintained by members of the Google Analytics developer platform team and is primarily intended for a developer audience. It is not an official Google Analytics product and does not qualify for Google Analytics 360 support. Developers who choose to use this library are responsible for ensuring that their implementation meets the requirements of the [Google Analytics Terms of Service](https://www.google.com/analytics/terms/us.html) and the legal obligations of their respective country.
+**Wyłączenie odpowiedzialności:** autotrack jest utrzymywany przez członków platformy developerskiej Google Analytics i jest przede wszystkim kierowany do społeczności developerów. Nie jest to oficjalny produkt Google Analytics i nie kwalifikuje się do wsparcia Google Analytics 360. Developerzy używający tej biblioteki są odpowiedzialni za zapewnienie aby ich implementacja spełniała wymogi [Warunków świadczenia usług Google Analytics](https://www.google.com/analytics/terms/us.html) oraz zobowiązania prawne ich kraju zamieszkania.
 
 ## Instalacja i używanie
 
-To add autotrack to your site, you have to do two things:
+Aby dodać autotrack do Twojej strony, musisz zrobić dwie rzeczy:
 
-1. Load the `autotrack.js` script file on your page.
-2. Update your [tracking snippet](https://developers.google.com/analytics/devguides/collection/analyticsjs/tracking-snippet-reference) to [require](https://developers.google.com/analytics/devguides/collection/analyticsjs/using-plugins) the various autotrack plugins you want to use.
+1. Załaduj skrypt `autotrack.js` na swojej stronie.
+2. Zaktualizuj swój [kod śledzący](https://developers.google.com/analytics/devguides/collection/analyticsjs/tracking-snippet-reference) by [wymagał](https://developers.google.com/analytics/devguides/collection/analyticsjs/using-plugins) pluginy autotracka których chcesz użyć.
 
-If your site already includes the default JavaScript tracking snippet, you can modify it too look something like this:
+Jeśli twoja strona już zawiera domyślny kod śledzący JavaScript, możesz go zmodyfiować by wyglądał podobnie do tego:
 
 ```html
 <script>
@@ -94,17 +94,17 @@ ga('send', 'pageview');
 <script async src='path/to/autotrack.js'></script>
 ```
 
-Of course, you'll have to make the following modifications to customize autotrack to your needs:
+Oczywiście będziesz musiał dokonać następujących zmian by dopasować autotrack do swoich potrzeb:
 
-- Replace `UA-XXXXX-Y` with your [tracking ID](https://support.google.com/analytics/answer/1032385)
-- Replace the sample list of plugin `require` statements with the plugins you want to use.
-- Replace `path/to/autotrack.js` with the actual location of the `autotrack.js` file hosted on your server.
+- Zamień `UA-XXXXX-Y` na twój [tracking ID](https://support.google.com/analytics/answer/1032385)
+- Zamień przykładową listę pluginów w wyrażeniu `require` pluginami których chcesz użyć.
+- Zamień `path/to/autotrack.js` aktualną lokalizacją pliku `autotrack.js` hostowanego na twoim serwerze.
 
-**Note:** the [analytics.js plugin system](https://developers.google.com/analytics/devguides/collection/analyticsjs/using-plugins) is designed to support asynchronously loaded scripts, so it doesn't matter if `autotrack.js` is loaded before or after `analytics.js`. It also doesn't matter if the `autotrack.js` library is loaded individually or bundled with the rest of your JavaScript code.
+**Nota:** [system pluginów analytics.js](https://developers.google.com/analytics/devguides/collection/analyticsjs/using-plugins) został stworzony by wspierać asynchroniczne ładowanie skryptów, więc nie ma znaczenia czy `autotrack.js` jest ładowany przed czy po `analytics.js`. Nie ma także znaczenia czy biblioteka `autotrack.js` jest ładowana samodzielnie czy też wraz z resztą Twojego kodu JavaScript.
 
 ### Ładowanie autotracka za pomocą npm
 
-If you use npm and a module loader like [Browserify](http://browserify.org/), [Webpack](https://webpack.github.io/), or [SystemJS](https://github.com/systemjs/systemjs), you can include autotrack in your build by requiring it as you would any other npm module:
+Jeśli używasz npm wraz z loaderem modułów takim jak [Browserify](http://browserify.org/), [Webpack](https://webpack.github.io/) lub [SystemJS](https://github.com/systemjs/systemjs), możesz dołączyć autotracka w swoim projekcie w taki sam sposób jak każdy inny moduł npm:
 
 ```sh
 npm install autotrack
@@ -115,7 +115,7 @@ npm install autotrack
 require('autotrack');
 ```
 
-The above code will include all autotrack plugins in your generated source file. If you only want to include a specific set of plugins, you can require them individually:
+Powyższy kod dołączy wszystkie pluginy autotracka do generowanego pliku źródłowego. Jeśli chcesz dołączyć wybrany zestaw pluginów, możesz dołączyć je indywidualnie:
 
 ```js
 // In your JavaScript code
@@ -125,9 +125,9 @@ require('autotrack/lib/plugins/url-change-tracker');
 // ...
 ```
 
-The above examples show how to include the plugin source code in your final, generated JavaScript file, which accomplishes the first step of the two-step installation process.
+Powyższe przykłady pokazują jak dołączyć kod źródłowy pluginów do Twojego finalnego, wygenerowanego pliku JavaScript, co wypełnia pierwszy z dwóch kroków procesu instalacji.
 
-You still have to update your tracking snippet and require the plugins you want to use:
+Wciąż musisz zaktualizować swój kod śledzący i dołączyć pluginy których chcesz użyć:
 
 
 ```js
@@ -143,35 +143,35 @@ ga('require', 'urlChangeTracker');
 ga('send', 'pageview');
 ```
 
-**Note:** be careful not to confuse the node module [`require`](https://nodejs.org/api/modules.html) statement with the `analytics.js` [`require`](https://developers.google.com/analytics/devguides/collection/analyticsjs/command-queue-reference#require) command. When loading autotrack with an npm module loader, both requires must be used.
+**Nota:** uważaj by nie pomylić wyrażenia [`require`](https://nodejs.org/api/modules.html) w module node z komendą [`require`](https://developers.google.com/analytics/devguides/collection/analyticsjs/command-queue-reference#require) ze skryptu `analytics.js`. Gdy ładujesz autotrack wraz z loaderem modułów npm, oba muszą zostać użyte.
 
 ### Przekazywanie opcji konfiguracji
 
-All autotrack plugins accept a configuration object as the third parameter to the `require` command.
+Wszystkie pluginy autotracka przyjmują obiekt konfiguracyjny jako trzeci parametr komendy `require`.
 
-Some of the plugins (e.g. `outboundLinkTracker`, `socialWidgetTracker`, `urlChangeTracker`) have a default behavior that works for most people without specifying any configuration options. Other plugins (e.g. `cleanUrlTracker`, `impressionTracker`, `mediaQueryTracker`) require certain configuration options to be set in order to work.
+Niektóre pluginy (np. `outboundLinkTracker`, `socialWidgetTracker`, `urlChangeTracker`) zachowują się w sposób domyślny wystarczający dla większości osób bez specyfiowania żadnych opcji konfiguracyjnych. Pozostałe pluginy (np. `cleanUrlTracker`, `impressionTracker`, `mediaQueryTracker`) wymagają ustawienia pewnych opcji konfiguracyjnych by mogły pracować.
 
-See the individual plugin documentation to reference what options each plugin accepts (and what the default value is, if any).
+Sprawdź dokumentację konkretnego pluginu by dowiedzieć się jakie opcje akceptuje dany plugin (oraz czy ma ustawioną wartość domyślną).
 
 ## Zaawansowana konfiguracja
 
 ### Własna konfiguracja
 
-The autotrack library is built modularly and each plugin includes its own dependencies, so you can create a custom build of the library using a script bundler such as [Browserify](http://browserify.org/).
+Biblioteka autotrack jest zbudowana modułowo i każdy plugin zawiera swoje własne zależności, możesz więc zbudować swoją własną wercję biblioteki używając bundlera skryptów takiego jak [Browserify](http://browserify.org/).
 
-The following example shows how to create a build that only includes the `eventTracker` and `outboundLinkTracker` plugins:
+Następujący przykład pokazuje jak stworzyć bibliotekę która zawiera tylko pluginy `eventTracker` oraz `outboundLinkTracker`:
 
 ```sh
 browserify lib/plugins/event-tracker lib/plugins/outbound-link-tracker
 ```
 
-When making a custom build, be sure to update the tracking snippet to only require plugins included in your build. Requiring a plugin that's not included in the build will create an unmet dependency, which will prevent subsequent commands from running.
+Tworząc swoją własną kompilację, upewnij się by zaktualizować swój kod śledzący aby wymagał tylko pluginy zawarte w Twojej kompilacji. Wymaganie pluginu który nie jest zawarty w Twojej kompilacji stworzy niezaspokojoną zależność, co uniemożliwi egzekucję następnych komend.
 
-If you're already using a module loader like [Browserify](http://browserify.org/), [Webpack](https://webpack.github.io/), or [SystemJS](https://github.com/systemjs/systemjs) to build your JavaScript, you can skip the above step and just require the plugins as described in the [loading autotrack via npm](#loading-autotrack-via-npm) section.
+Jeśli już używasz loadera modułów jak [Browserify](http://browserify.org/), [Webpack](https://webpack.github.io/) lub [SystemJS](https://github.com/systemjs/systemjs) do budowy swojego kodu JavaScript, możesz pominąć powyższy krok i po prostu wymagać pluginów jak opisane w sekcji [ładowanie autotracka za pomocą npm](#ładowanie-autotracka-za-pomocą-npm).
 
 ### Używanie autotracka z wieloma trackerami
 
-All autotrack plugins support multiple trackers and work by specifying the tracker name in the `require` command. The following example creates two trackers and requires various autotrack plugins on each.
+Wszystkie pluginy autotracka wspierają obsługę wielu trackerów na raz co wymaga nadania trackerowi nazwy w komendzie `require`. Następujący przykład pokazuje jak stworzyć dwa trackery i wymagać różnych pluginów autotracka z każdym z nich.
 
 ```js
 // Creates two trackers, one named `tracker1` and one named `tracker2`.
@@ -194,9 +194,9 @@ ga('tracker2.send', 'pageview');
 
 ## Wsparcie przeglądarek
 
-Autotrack will safely run in any browser without errors, as feature detection is always used with any potentially unsupported code. However, autotrack will only track features supported in the browser running it. For example, a user running Internet Explorer 8 will not be able to track media query usage, as media queries themselves aren't supported in Internet Explorer 8.
+Autotrack działa bezpiecznie w każdej przeglądarce bez wyrzucania błędów, gdyż wykrywanie obsługi funkcjonalności jest zawsze używane wraz z potencjalnie nieobsługiwanym kodem. Jednakże, autotrack będzie śledził tylko używając funkcjonalności przeglądarki na której w danym momencie działa. Na przykład, jeśli użytkownik korzysta z przeglądarki Internet Explorer 8, nie będzie można śledzić użycia media query, gdyż media query nie jest wspierane przez program Internet Explorer 8.
 
-All autotrack plugins are [tested via Sauce Labs](https://saucelabs.com/u/autotrack) in the following browsers:
+Wszystkie pluginy autotracka są [testowane przy użyciu Sauce Labs](https://saucelabs.com/u/autotrack) w następujących przeglądarkach:
 
 <table>
   <tr>
@@ -229,15 +229,16 @@ All autotrack plugins are [tested via Sauce Labs](https://saucelabs.com/u/autotr
 
 ## Tłumaczenia
 
-The following translations have been graciously provided by the community. Please note that these translations are unofficial and may be inaccurate or out of date:
+Następujące tłumaczenia zostały stworzone dzięki życzliwości społeczności. Są one nieoficjalne i mogą być niedokładne bądź przestarzałe:
 
-* [Japanese](https://github.com/nebosuker/autotrack)
-* [Chinese](https://github.com/stevezhuang/autotrack/blob/master/README.zh.md)
+* [Japoński](https://github.com/nebosuker/autotrack)
+* [Chiński](https://github.com/stevezhuang/autotrack/blob/master/README.zh.md)
+* [Polski](https://github.com/krisu7/autotrack)
 
-If you discover issues with a particular translation, please file them with the appropriate repository. To submit your own translation, follow these steps:
+Jeśli odkryjesz problemy z konkretnym tłumaczeniem, uprzejmie prosimy kierować je do konkretnego repozytorium. W celu stworzenia swojego własnego tłumaczenia, postępuj następująco:
 
-1. Fork this repository.
-2. Update the settings of your fork to [allow issues](http://programmers.stackexchange.com/questions/179468/forking-a-repo-on-github-but-allowing-new-issues-on-the-fork).
-3. Remove all non-documentation files.
-4. Update the documentation files with your translated versions.
-5. Submit a pull request to this repository that adds a link to your fork to the above list.
+1. Stwórz fork tego repozytorium.
+2. Zaktualizuj ustawienia swojego forka by [umożliwić zgłaszanie problemów](http://programmers.stackexchange.com/questions/179468/forking-a-repo-on-github-but-allowing-new-issues-on-the-fork).
+3. Usuń wszystkie pliki nie związane z dokumentacją.
+4. Zaktualizuj pliki doumentacji swoimi tłumaczeniami.
+5. Wyślij pull request do repozytorium [googleanalytics/autotrack](https://github.com/googleanalytics/autotrack) który dodaje link do twojego forka do powyższej listy.
