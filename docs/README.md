@@ -1,17 +1,17 @@
-# Autotrack Documentation
+# Doumentacja Autotracka
 
-The autotrack [README](/README.md) is the best source to get a general overview of the autotrack library and get started using it.
+Plik [README](/README.md) autotracka jest najlepszym źródłem by uzyskać ogólny przegląd biblioteki autotrack by zacząć jej używać.
 
-Once you understand how to use autotrack, the references listed here will help you get a deeper understanding and provide you with comprehensive instructions on how to use each autotrack plugin.
+Gdy już zrozumiesz jak używać autotrack, przedstawione tu odnośniki pomogą Tobie uzyskać głębsze zrozumienie i dostarczą wyczerpujących instrukcji używania każdego z pluginów.
 
-If you have a question that's not answered in one of these documents, feel free to [open an issue](https://github.com/googleanalytics/autotrack/issues/new) and ask.
+Jeśli masz pytania na które nie ma odpowiedzi w niniejszych dokumentach, prosimy [otwórz nowy issue](https://github.com/googleanalytics/autotrack/issues/new) i pytaj śmiało.
 
-## General references
+## Ogólne odnośniki
 
-- [Common options](/docs/common-options.md)
-- [Upgrading from previous versions](/docs/upgrading.md)
+- [Ogólne opcje](/docs/common-options.md)
+- [Aktualizacja z poprzednich wersji](/docs/upgrading.md)
 
-## Plugin references
+## Opisy pluginów
 
 - [`cleanUrlTracker`](/docs/plugins/clean-url-tracker.md)
 - [`eventTracker`](/docs/plugins/event-tracker.md)
