@@ -1,24 +1,24 @@
-Want to contribute? Great! First, read this page (including the small print at the end).
+Chcesz pomóc nam w tworzeniu? Świetnie! Najpierw, przeczytaj tę stronę 
+(wraz z drobnym drukiem pod koniec).
 
-### Before you contribute
-Before we can use your code, you must sign the
-[Google Individual Contributor License Agreement](https://developers.google.com/open-source/cla/individual?csw=1)
-(CLA), which you can do online. The CLA is necessary mainly because you own the
-copyright to your changes, even after your contribution becomes part of our
-codebase, so we need your permission to use and distribute your code. We also
-need to be sure of various other things—for instance that you'll tell us if you
-know that your code infringes on other people's patents. You don't have to sign
-the CLA until after you've submitted your code for review and a member has
-approved it, but you must do it before we can put your code into our codebase.
-Before you start working on a larger contribution, you should get in touch with
-us first through the issue tracker with your idea so that we can help out and
-possibly guide you. Coordinating up front makes it much easier to avoid
-frustration later on.
+### Zanim pomożesz
+Zanim użyjemy twojego kodu, musisz podpisać [Google Individual Contributor License Agreement](https://developers.google.com/open-source/cla/individual?csw=1)
+(CLA), co możesz zrobić online. CLA jest potrzebne przede wszystkim ponieważ 
+posiadasz prawa autorskie do wprowadzanych przez Ciebie zmian, nawet po tym 
+jak twój wkład zostanie częścią naszej bazy kodu, po to by móc użyć i 
+dystrybuować Twój kod. Musimy być również pewni różnych innych rzeczy - na 
+przykład, że powiesz nam jeśli wiesz że twój kod narusza patenty innych osób.
+Nie musisz podpisywać CLA od razu, możesz to zrobić po przesłaniu kodu do przeglądu
+i został on zatwierdzony, jednak musisz tego dokonać byśmy mogli dodać Twój wkład
+do naszej bazy. Zanim zaczniesz pracować nad większym wkładem, powinieneś najpierw
+przedstawić swój pomysł poprzez issue tracker abyśmy mogli tobie pomóc i w miarę
+możliwości poprowadzić. Współpracując z nami od samego początku zaoszczędzis sobie 
+wiele frustracji później.
 
-### Code reviews
-All submissions, including submissions by project members, require review. We
-use Github pull requests for this purpose.
+### Przegląd kodu
+Wszystkie zgłoszenia, ze zgłoszeniami członków projektu włącznie, wymagają przeglądu.
+Używamy Github pull requests w tym celu.
 
-### The small print
-Contributions made by corporations are covered by a different agreement than
-the one above, the Software Grant and Corporate Contributor License Agreement.
+### Drobnym drukiem
+Zmiany wprowadzanie przez korporacje są pokryte inną umową niż powyższa, wymagają one
+Software Grant oraz Corporate Contributor License Agreement.
