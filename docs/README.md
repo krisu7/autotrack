@@ -1,4 +1,4 @@
-# Doumentacja Autotracka
+# Dokumentacja Autotracka
 
 Plik [README](/README.md) autotracka jest najlepszym źródłem by uzyskać ogólny przegląd biblioteki autotrack by zacząć jej używać.
 
