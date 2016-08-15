@@ -1,4 +1,4 @@
-# Ogólne opcje
+# Typowe ustawienia
 
 Wiele pluginów autotracka przyjmuje opcje które są powszechne dla wielu różnych pluginów. Są one udokumentowane w tym przewodniku:
 
