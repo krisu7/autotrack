@@ -1,14 +1,14 @@
-# Upgrade Guide
+# Jak aktualizować
 
-This guide outlines how to upgrade from any pre-1.0 version to version 1.0.
+Niniejszy przewodnik opisuje sposób aktualizacji z wersji przed 1.0 do wersji 1.0.
 
-## Breaking changes
+## Zmiany psujące build
 
-### Global changes
+### Globalne zmiany
 
-In version 1.0, you can no longer require all plugins with the command `ga('require', 'autotrack')`. This change was made to avoid users accidentally enabling plugin behavior they didn't intend.
+W wersji 1.0, nie możesz już ładować wszystkich pluginów komendą `ga('require', 'autotrack')`. Zmiana ta została wprowadzona by zapobiec przypadkowemu włączaniu pluginów których nie chcez.
 
-Going forward, all autotrack plugins must be individually required, and their options individually specified.
+W przyszłości, wszystkie pluginy muszą być ładowane indywidualnie, a ich opcje specyfikowane indywidualnie.
 
 ```html
 <script>
@@ -27,25 +27,25 @@ ga('send', 'pageview');
 <script async src="path/to/autotrack.js"></script>
 ```
 
-In all 1.x versions, a warning will be logged to the console if you require the `autotrack` plugin. In version 2.0, this warning will go away.
+We wszystkich wersjach 1.x, w konsoli będzie logowane ostrzeżenie jeśli użyjesz require `autotrack`. W wersji 2.0, ostrzeżenie to zniknie.
 
-### Individual plugin changes
+### Indywidualne zmiany w pluginach
 
 #### [`mediaQueryTracker`](/docs/plugins/media-query-tracker.md)
 
-- The `mediaQueryDefinitions` option has been renamed to `definitions`.
-- The `mediaQueryChangeTemplate` option has been renamed to `changeTemplate`.
-- The `mediaQueryChangeTimeout` option has been renamed to `changeTimeout`.
+- Opcja `mediaQueryDefinitions` zmieniła nazwę na `definitions`.
+- Opcja `mediaQueryChangeTemplate` zmieniła nazwę na `changeTemplate`.
+- Opcja `mediaQueryChangeTimeout` zmieniła nazwę na `changeTimeout`.
 
 #### `socialTracker`
 
-- The `socialTracker` plugin has been renamed to [`socialWidgetTracker`](/docs/plugins/social-widget-tracker.md) and no longer supports declarative social interaction tracking (since that can now be handled entirely via the [`eventTracker`](/docs/plugins/event-tracker.md) plugin).
+- Plugin `socialTracker` zmienił nazwę na [`socialWidgetTracker`](/docs/plugins/social-widget-tracker.md) i już nie wspiera deklaratywnego trackingu interakcji socjalnych (można to teraz robić w całości za pomocą pluginu [`eventTracker`](/docs/plugins/event-tracker.md)).
 
-## Plugin enhancements
+## Usprawnienia pluginów
 
-### Global enhancement
+### Globalne usprawnienia
 
-- All plugins that send hits accept both [`fieldsObj`](/docs/common-options.md#fieldsobj) and [`hitFilter`](/docs/common-options.md#hitfilter) options. These options can be used to set or change any valid analytics.js field prior to the hit being sent.
+- Wszystkie pluginy okceptują -All plugins that send hits accept both [`fieldsObj`](/docs/common-options.md#fieldsobj) and [`hitFilter`](/docs/common-options.md#hitfilter) options. These options can be used to set or change any valid analytics.js field prior to the hit being sent.
 - All plugins that send hits as a result of user interaction with a DOM element support [setting field values declaratively](/docs/common-options.md#attributeprefix).
 
 ### Individual plugin enhancements
